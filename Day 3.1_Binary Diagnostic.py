@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
 
 f = open("day3.txt","r")
 lines = f.readlines()
@@ -26,6 +22,8 @@ for column in range(0, len(lines[0])-1):
             newLines.append(lines[i])
     lines = newLines
     newLines = []
+    if len(lines) == 1:
+        break
     
 oxygenBin = lines[0]
 
@@ -35,16 +33,18 @@ lines = f.readlines()
 
 for column in range(0, len(lines[0])-1):
     common = 0
+    print(column)
     for line in lines:
         print(line[column])
         if line[column] == '1':
             common += 1
         else:
             common -= 1
-    if common > 0 : #number 1 is more common
+    if common >= 0 : #number 1 is more common
         most = 1
     else:            # even or 0 is more common
         most = 0
+    print("most common: " + str(most))
     
     #remove numbers that don't start with that
     for i in range(0, len(lines)):
@@ -63,13 +63,9 @@ f.close()
 print(oxygenBin)
 print(carbonBin)
 
-oxygen = 0
-carbon = 0
-for i in range(0, len(oxygenBin) -1):
-    if int(oxygenBin[i]) > 0:
-        oxygen |= 2 ** (len(line)-(i)-2)
-    if int(carbonBin[i]) > 0:
-        carbon |= 2 ** (len(line)-(i)-2)
+oxygen = int(oxygenBin, 2)
+carbon = int(carbonBin, 2)
+
 print(oxygen)
 print(carbon)
 print(oxygen * carbon)
