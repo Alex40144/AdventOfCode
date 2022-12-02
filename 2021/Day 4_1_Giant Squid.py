@@ -1,6 +1,6 @@
 import re
 from pprint import pprint
-f = open("day4.txt","r")
+f = open("2021\inputs\day4.txt","r")
 lines = f.readlines()
 
 calls = lines[0]

@@ -1,5 +1,4 @@
-
-f = open("day3.txt","r")
+f = open("2021\inputs\day3.txt","r")
 lines = f.readlines()
 
 newLines = []

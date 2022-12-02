@@ -6,7 +6,7 @@ common = [0,0,0,0,0,0,0,0,0,0,0,0]
 line = []
 
 
-f = open("day3.txt","r")
+f = open("2021\inputs\day3.txt","r")
 lines = f.readlines()
 
 for line in lines:

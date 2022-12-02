@@ -1,7 +1,7 @@
 previous = 9999
 count = 0
 
-f = open("day1.txt","r")
+f = open("2021\inputs\day1.txt","r")
 lines = f.readlines()
 
 for line in lines:

@@ -4,7 +4,7 @@ depth = 0
 line = []
 
 
-f = open("day2.txt","r")
+f = open("2021\inputs\day2.txt","r")
 lines = f.readlines()
 
 for line in lines:

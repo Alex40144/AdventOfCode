@@ -1,6 +1,6 @@
 Highest = []
 
-f = open("./2022/day1.txt","r")
+f = open("2022\inputs\day1.txt","r")
 lines = f.readlines()
 
 count = 0
